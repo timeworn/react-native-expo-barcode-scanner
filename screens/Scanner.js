@@ -16,9 +16,11 @@ export default function Scanner() {
 
     const handleBarCodeScanned = ({type, data}) => {
         setScanned(true);
-        setScanDate(new Date().toLocaleString());
-        alert(`Invoice data : ${data}`);
-        sendDataToServer(data);
+        const currentDate = new Date();
+        setScanDate(currentDate);
+        alert(`Invoice data : ${data} , ${currentDate}`);
+        const finalData = { ...data, scandate_data: currentDate}
+        sendDataToServer(finalData);
     };
 
     if (hasPermission === null) {
