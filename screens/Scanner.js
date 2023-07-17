@@ -32,7 +32,7 @@ export default function Scanner() {
     const sendDataToServer = async (data) => {
         const senddata = {data}
         try {
-            const response = await fetch('http://154.56.61.195:8080/api/test/scan_data', {
+            const response = await fetch('http://10.10.13.101:8080/api/test/scan_data', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

@@ -15,3 +15,5 @@ Learn React Native (Expo SDK 47) by easy-to-difficult examples.
 - Run on both Android & iOS: `yarn mobile` (or `npm run mobile`).
 
 - Run server: `yarn start`. Then use app **Expo Go** on your mobile and scan QR code on the terminal.
+
+- Expo Build: `npm install -g expo-cli eas-cli`, `expo login`, `eas whoami`, `eas build -p android --profile preview`
