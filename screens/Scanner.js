@@ -18,8 +18,8 @@ export default function Scanner() {
         setScanned(true);
         const currentDate = new Date();
         setScanDate(currentDate);
-        alert(`Invoice data : ${data} , ${currentDate}`);
-        const finalData = { ...data, scandate_data: currentDate}
+        alert(`Invoice data : ${data}, ${currentDate}`);
+        const finalData = data + `,scandate:${currentDate}`;
         sendDataToServer(finalData);
     };
 
